@@ -11,6 +11,5 @@ if !( has( 'python' ) || has( 'python3' ) )
   finish
 endif
 
-augroup kcget
-  autocmd! FileType *.txt :call kcget#GetServices()
-augroup END
+nnoremap <leader>s
+	\ :call kcget#GetServices()<cr>
