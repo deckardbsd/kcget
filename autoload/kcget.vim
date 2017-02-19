@@ -26,7 +26,6 @@ function! s:SetupPython() abort
 # Add python sources folder to the system path.
 script_folder = vim.eval( 's:script_folder_path' )
 sys.path.insert( 0, os.path.join( script_folder, '..', 'python' ) )
-print("path: {}".format(script_folder))
 
 import os
 import sys
