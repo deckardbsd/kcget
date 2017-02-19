@@ -36,7 +36,7 @@ endfunction
 
 call s:SetupPython()
 
-function! GetServices()
+function! kcget#GetServices()
     execute 'pyf ' s:script_folder_path . '/../python/get_services.py'
 endfunction
 
