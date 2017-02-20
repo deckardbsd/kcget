@@ -11,5 +11,7 @@ if !( has( 'python' ) || has( 'python3' ) )
   finish
 endif
 
-nnoremap <leader>s
-	\ :call kcget#GetServices()<cr>
+nnoremap <leader>sd
+	\ :call kcget#GetServices("service", "development")<cr>
+nnoremap <leader>ss
+	\ :call kcget#GetServices("service", "sandbox")<cr>

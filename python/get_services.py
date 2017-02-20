@@ -1,9 +1,11 @@
-import vim, requests, json
+import sys, vim, requests, json
 from utils import services
 
 
-TIMEOUT = 5
-URL = "http://kd.syncrasy.io/api/v1/service/development"
+TIMEOUT = 3
+ktype = sys.argv[-1][0]
+namespace = sys.argv[-1][1]
+URL = "http://kd.syncrasy.io/api/v1/{0}/{1}".format(ktype, namespace)
 
 # service class
 # name, port, namespace
@@ -39,6 +41,4 @@ try:
 
 except Exception, e:
     print(e)
-
-
 

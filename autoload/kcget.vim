@@ -36,7 +36,10 @@ endfunction
 
 call s:SetupPython()
 
-function! kcget#GetServices()
+function! kcget#GetServices(ktype, namespace)
+    python import sys
+    python type_ns = (vim.eval("a:ktype"), vim.eval("a:namespace"))
+    python sys.argv.append(type_ns)
     execute 'pyf ' s:script_folder_path . '/../python/get_services.py'
 endfunction
 
